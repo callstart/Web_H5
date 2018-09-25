@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"/>
+    <meta content="yes" name="apple-mobile-web-app-capable"/>
+    <meta content="yes" name="apple-touch-fullscreen"/>
+    <meta content="telephone=no" name="format-detection"/>
+    <meta content="email=no" name="format-detection"/>
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <title>我的账户</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" type="text/css" href="/wechat/style/common-base.css?v=d034e4979d">
+    <link rel="stylesheet" type="text/css" href="/wechat/style/layout.css?v=a3c1e3c2e2">
+</head>
+<body>
+    <ul class="fill_in info_list">
+        <li>
+            <label><span>姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名：</span></label>
+            <div class="inp_div">
+                <span class="span_con" data-role="pName"></span>
+            </div>
+        </li>
+        <li>
+            <label><span>性&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;别：</span></label>
+            <div class="inp_div">
+                <span class="span_con" data-role="pGendId"></span>
+            </div>
+        </li>
+        <li>
+            <label><span>身&nbsp;份&nbsp;证&nbsp;：</span></label>
+            <div class="inp_div">
+                <span class="span_con" data-role="pCertNo"></span>
+            </div>
+        </li>
+        <li>
+            <label><span>手&nbsp;机&nbsp;号&nbsp;：</span></label>
+            <div class="inp_div">
+               <span class="span_con" data-role="phone"></span>
+            </div>
+        </li>
+        <li>
+            <label><span>常用地址：</span></label>
+            <div class="inp_div">
+                <a href="javascript:;" data-role="pAddr"></a>
+            </div>
+        </li>
+        <li>
+            <label><span>医保卡号：</span></label>
+            <div class="inp_div">
+                <a href="javascript:;" data-role="miCardNo"></a>
+            </div>
+        </li>
+    </ul>
+    <section class="but_div">
+        <input type="button" value="退出登录" class="exit_login" data-role="logout"/>
+    </section>
+    <!--提示层-->
+    <div class="mask" data-role="mask"></div>
+    <div class="exit_hint" data-role="logoutPanel">
+        <h2>退出登录</h2>
+        <p>确定要退出登录吗？</p>
+        <div class="bottom">
+            <a href="javascript:;" class="cancel" data-role="cancel">取消</a>
+            <span></span>
+            <a href="javascript:;" class="determine" data-role="confirm">确定</a>
+        </div>
+    </div>
+    <script src="/general/script/reference/util.zepto.js?v=9efc7c2f7a"></script>
+    <script src="/wechat/script/common/util.base.js?v=154588cb3c"></script>
+    <script src="/wechat/script/common/jweixin-1.0.0.js?v=e91fab15eb"></script>
+    <script src="/wechat/script/me/index/index.js?v=7f8c61deaf"></script>
+</body>
+</html>
+
+
+

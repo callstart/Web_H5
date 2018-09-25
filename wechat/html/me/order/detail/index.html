@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"/>
+    <meta content="yes" name="apple-mobile-web-app-capable"/>
+    <meta content="yes" name="apple-touch-fullscreen"/>
+    <meta content="telephone=no" name="format-detection"/>
+    <meta content="email=no" name="format-detection"/>
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <title>预约挂号详情</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content=""/>
+    <link rel="stylesheet" type="text/css" href="/wechat/style/common-base.css">
+    <link rel="stylesheet" type="text/css" href="/wechat/style/layout.css">
+     <!-- <link rel="stylesheet" href="/wechat/style/common-base-b8d33c0f98.css">
+    <link rel="stylesheet" href="http://gztest.ebaonet.cn/wechat/style/layout-06071b510d.css">-->
+    <style>
+        .none{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- 模态窗口 -->
+
+    <!--取消成功-->
+    <div class="b_c_popup none" id="divbox" data-role="cancle-over">
+        <img src="/wechat/images/suc_icon.png">
+        <p>取消成功</p>
+    </div>
+
+
+   <!-- 取消订单确认框 -->
+    <div class="order_detail_p order_popup none" data-role="cancle_popup">
+        <h3>取消订单</h3>
+        <div class="order_detail_cont">确定要取消此订单吗？</div>
+        <div class="order_detail_btn"><a href="javascript:;" data-role="cancerBtn">取消</a><a href="javascript:;" class="blue_c" data-role="sureBtn">确定</a></div>
+    </div>
+    <div id="fade" class="black_overlay none" data-role="fade"></div>
+
+    <!--取消中-->
+    <div class="b_c_popup none" id="divbox" data-role="cancle-doing">
+        <img src="/wechat/images/circle_icon.png" class="rotate">
+        <p>取消中，请稍候...</p>
+    </div>
+
+
+    <div data-role="order-popup" class="none">
+         <h2 class="ordered_register_contit none" data-role="times"></h2>
+         <div class="ordered_register_con" data-role="infos"></div>
+         <div class="ordered_register_bottom con_register_bottom" data-role="btnbox">
+         </div>
+    </div>
+
+    <script type="text/template" data-panle="infos">
+        <h3>就诊序号：#admSeq# <div class="state">#dispName#</div></h3>
+        <ul>
+            <li><span>就诊日期：</span>#regtDate# #regtTimeTypeId#</li>
+            <li><span>就诊时段：</span>#regtTimeStart#－#regtTimeEnd#</li>
+            <li><span>医院：</span>#hospName#</li>
+            <li><span>科室：</span>#deptName#</li>
+            <li><span>医生：</span>#drName# #drLvlId#</li>
+            <li><span>挂号费：</span>￥#regtAmt#元</li>
+        </ul>
+        <ul>
+            <li><span>就诊人：</span>#pName#</li>
+            <li><span>手机号：</span>#phone#</li>
+            <li><span>身份证：</span>#pCertNo#</li>
+            <li><span>下单时间：</span>#orderTimes#</li>
+
+            <li class="none" data-role="residual_time"><span>支付状态：</span>#fullName#<div class="residual_time" data-role="timeRest"></div></li>
+            <li><span class="ft_note">提示：</span>#hint#</li>
+        </ul>
+    </script>
+    <script src="/general/script/reference/util.zepto.js"></script>
+    <script src="/wechat/script/common/util.base.js"></script>
+  <!--  <script src="http://gztest.ebaonet.cn/general/script/reference/util.zepto-0739589874.js"></script>
+    <script src="http://gztest.ebaonet.cn/wechat/script/common/util.base-24dabe022e.js"></script>-->
+    <script src="/wechat/script/me/order/detail/index.js"></script>
+</body>
+</html>
+
+
+

@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"/>
+    <meta content="yes" name="apple-mobile-web-app-capable"/>
+    <meta content="yes" name="apple-touch-fullscreen"/>
+    <meta content="telephone=no" name="format-detection"/>
+    <meta content="email=no" name="format-detection"/>
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <title>注册</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" type="text/css" href="/wechat/style/common-base.css">
+    <link rel="stylesheet" type="text/css" href="/wechat/style/layout.css">
+</head>
+<body>
+    <ul class="fill_in">
+        <li>
+            <label><i>*</i><span>姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名：</span></label>
+            <div class="inp_div">
+                <input type="text" value="" placeholder="请输入真实姓名" data-role="name" />
+            </div>
+        </li>
+        <li>
+            <label><i>*</i><span>性&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;别：</span></label>
+            <div class="inp_div radio_choice">
+                <span data-role="mockGender">男<input name="gender" type="radio" value="1" data-role="gender"></span>
+                <span data-role="mockGender">女<input name="gender" type="radio" value="2" data-role="gender"></span>
+            </div>
+        </li>
+        <li>
+            <label><i>*</i><span>身&nbsp;份&nbsp;证&nbsp;：</span></label>
+            <div class="inp_div">
+                <input type="text" value="" placeholder="一经填写无法修改，请谨慎填写" data-role="cardNo"/>
+            </div>
+        </li>
+        <li class="textarea_div">
+            <label><i>*</i><span>常用地址：</span></label>
+            <div class="inp_div">
+                <textarea name="" id="ta_result" cols="" rows="" placeholder="用于接收报告、药品等" data-role="addr"></textarea>
+            </div>
+        </li>
+    </ul>
+    <ul class="fill_in">
+        <li>
+            <label><i>*</i><span>手&nbsp;机&nbsp;号&nbsp;：</span></label>
+            <div class="inp_div">
+                <input type="number" value="" placeholder="请输入手机号" data-role="phoneNo"/>
+            </div>
+        </li>
+        <li>
+            <label><i>*</i><span>验&nbsp;证&nbsp;码&nbsp;：</span></label>
+            <div class="inp_div code">
+                <input type="text" value="" placeholder="短信验证码" data-role="msg" />
+            </div>
+            <input type="button" value="获取验证码" class="code_inp passwordGetCode" data-role="btnMsg" />
+        </li>
+        <li>
+            <label><i>*</i><span>登录密码：</span></label>
+            <div class="inp_div">
+                <input type="password" value="" placeholder="6-15位字母、数字、字符组合的密码" data-role="password"/>
+            </div>
+        </li>
+    </ul>
+    <div class="clause radio_choice radio_choice1"><span data-role="rule">同意相关<a href="/wechat/html/sys/terms/">服务条款</a>和<a href="/wechat/html/sys/private/">隐私政策</a><input name="" type="radio" value=""></span></div>
+    <section class="but_div2">
+        <input type="button" value="完成注册" class="register disabled" disabled data-role="btn"/>
+    </section>
+    <!--提示层-->
+    <div class="mask" data-role="mask"></div>
+    <div class="exit_hint" data-role="confirmpanel">
+        <h2>注册成功</h2>
+        <p>绑定诊疗卡,享受更多服务</p>
+        <div class="bottom">
+            <a href="javascript:;" class="cancel" data-role="cancel">暂不绑定</a>
+            <span></span>
+            <a href="javascript:;" class="determine" data-role="confirm">绑定诊疗卡</a>
+        </div>
+    </div>
+    <script src="/general/script/reference/util.zepto.js"></script>
+    <script src="/wechat/script/common/util.base.js"></script>
+    <script src="/wechat/script/sys/reg/index.js"></script>
+</body>
+</html>
+
+
+

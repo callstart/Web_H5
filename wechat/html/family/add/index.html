@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"/>
+    <meta content="yes" name="apple-mobile-web-app-capable"/>
+    <meta content="yes" name="apple-touch-fullscreen"/>
+    <meta content="telephone=no" name="format-detection"/>
+    <meta content="email=no" name="format-detection"/>
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <title>添加家庭成员</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" type="text/css" href="/wechat/style/common-base.css">
+    <link rel="stylesheet" type="text/css" href="/wechat/style/layout.css">
+</head>
+<body>
+    <h2 class="hospital_tit">成员信息</h2>
+    <form data-role="subInput">
+        <ul class="fill_in no_mt">
+            <li>
+                <label><i>*</i><span>姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名：</span></label>
+                <div class="inp_div">
+                    <input data-role="content" data-input="name" type="text" value="" placeholder="请如实填写，否则不能正常就诊" />
+                </div>
+            </li>
+            <li>
+                <label><i>*</i><span>身&nbsp;份&nbsp;证&nbsp;：</span></label>
+                <div class="inp_div">
+                    <input type="text" data-role="content" data-input="cardNo" value="" placeholder="一经填写无法修改，请谨慎填写" />
+                </div>
+            </li>
+            <li>
+                <label><i>*</i><span>手&nbsp;机&nbsp;号&nbsp;：</span></label>
+                <div class="inp_div">
+                    <input type="number" data-role="content" data-input="phone" value="" placeholder="用于接收预约成功短信，请谨慎填写" />
+                </div>
+            </li>
+            <li class="textarea_div">
+                <label><i>*</i><span>常用地址：</span></label>
+                <div class="inp_div">
+                    <textarea data-input="adr" name="" cols="" rows="" placeholder="最大长度25"></textarea>
+                </div>
+            </li>
+        </ul>
+    </form>
+    <!-- <div class="default_select">
+        <h2>设置为默认就诊人</h2>
+        <a href="javascript:;" class="default_a active" data-role="default_a" data-active="isDefault"></a>
+    </div> -->
+    <section class="but_div2">
+        <input type="button" data-role="submitButton" value="提交" class="disabled" disabled />
+    </section>
+</body>
+<script src="/general/script/reference/util.zepto.js"></script>
+<script src="/wechat/script/common/util.base.js"></script>
+<script src="/wechat/script/family/add/index.js"></script>
+</html>

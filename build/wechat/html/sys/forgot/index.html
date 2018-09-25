@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"/>
+    <meta content="yes" name="apple-mobile-web-app-capable"/>
+    <meta content="yes" name="apple-touch-fullscreen"/>
+    <meta content="telephone=no" name="format-detection"/>
+    <meta content="email=no" name="format-detection"/>
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <title>找回登录密码</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" type="text/css" href="/wechat/style/common-base.css?v=d034e4979d">
+    <link rel="stylesheet" type="text/css" href="/wechat/style/layout.css?v=a3c1e3c2e2">
+</head>
+<body>
+    <ul class="fill_in">
+        <li>
+            <label><i>*</i><span>手&nbsp;机&nbsp;号&nbsp;：</span></label>
+            <div class="inp_div">
+                <input type="number" value="" placeholder="请输入注册时的手机号" data-role="phoneNo" />
+            </div>
+        </li>
+        <li>
+            <label><i>*</i><span>验&nbsp;证&nbsp;码&nbsp;：</span></label>
+            <div class="inp_div code">
+                <input type="text" value="" placeholder="短信验证码" data-role="msg"/>
+            </div>
+            <input type="button" value="获取验证码" class="code_inp passwordGetCode" data-role="btnMsg"/>
+        </li>
+    </ul>
+    <ul class="fill_in">
+        <li>
+            <label><i>*</i><span>身&nbsp;份&nbsp;证&nbsp;：</span></label>
+            <div class="inp_div">
+                <input type="text" value="" placeholder="请输入本人身份证后6位" data-role="cardNo" />
+            </div>
+        </li>
+        <li>
+            <label><i>*</i><span>登录密码：</span></label>
+            <div class="inp_div">
+                <input type="password" value="" placeholder="6-15位字母、数字、字符组合的密码" data-role="password"/>
+            </div>
+        </li>
+    </ul>
+    <section class="but_div2">
+        <input type="button" value="重置密码" class="disabled" disabled data-role="btn"/>
+    </section>
+
+    <script src="/general/script/reference/util.zepto.js?v=9efc7c2f7a"></script>
+    <script src="/wechat/script/common/util.base.js?v=154588cb3c"></script>
+    <script src="/wechat/script/sys/forgot/index.js?v=cadd654638"></script>
+</body>
+</html>

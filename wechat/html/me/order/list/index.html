@@ -1,0 +1,90 @@
+<!doctype html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"/>
+    <meta content="yes" name="apple-mobile-web-app-capable"/>
+    <meta content="yes" name="apple-touch-fullscreen"/>
+    <meta content="telephone=no" name="format-detection"/>
+    <meta content="email=no" name="format-detection"/>
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <title>我的预约挂号</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" type="text/css" href="/wechat/style/common-base.css">
+    <link rel="stylesheet" type="text/css" href="/wechat/style/layout.css">
+</head>
+<body>
+    <div data-role="noCont" class="none">
+       <div class="no_result"><img src="/wechat/images/no_screen.png" alt="您未通过本微信端进行过网络预约挂号" /></div>
+       <div class="no_result_p">您未通过本微信端进行过网络预约挂号</div>
+    </div>
+    <!-- 模态窗口 -->
+
+    <!--取消成功-->
+    <div class="b_c_popup none" id="divbox" data-role="cancle-over">
+        <img src="/wechat/images/suc_icon.png">
+        <p>取消成功</p>
+    </div>
+
+   <!-- 取消订单确认框 -->
+    <div class="order_detail_p order_popup none" data-role="cancle_popup">
+        <h3>取消订单</h3>
+        <div class="order_detail_cont">确定要取消此订单吗？</div>
+        <div class="order_detail_btn"><a href="javascript:;" data-role="cancerBtn">取消</a><a href="javascript:;" class="blue_c" data-role="sureBtn">确定</a></div>
+    </div>
+    <div id="fade" class="black_overlay none" data-role="fade"></div>
+    <!--取消中-->
+    <div class="b_c_popup none" id="divbox" data-role="cancle-doing">
+        <img src="/wechat/images/circle_icon.png" class="rotate">
+        <p>取消中，请稍候...</p>
+    </div>
+
+    <div data-role="hasOrders" style="display:none;">
+        <div class="main-mechanism-list">
+            <div class="mask" data-role="mask"></div>
+            <section class="job-module">
+                <dl class="retrie">
+                    <dt>
+                        <a id="area" href="javascript:;" data-role="limit" data-view="limitArea">就诊人</a>
+                        <a id="wage" href="javascript:;" data-role="limit">筛&nbsp;&nbsp;选</a>
+                    </dt>
+                    <dd class="area">
+                        <ul class="downlist" data-screen="screen" data-role="area" data-view="cont"></ul>
+                    </dd>
+                    <dd class="wage">
+                        <ul class="downlist" data-screen="screen" data-role="wage" data-view="cont">
+                            <li style="height:auto;background:#fff;overflow:hidden;">
+                              <p>预约状态</p>
+                              <p class="level" data-role="rules" data-dom="d1">
+                              <a id="d1" href="javascript:;" class="current" data-role="currentLevel">不限</a>
+                              <a href="javascript:;">已预约</a>
+                              <a href="javascript:;">已就诊</a>
+                              <a href="javascript:;">已取消</a></p>
+                              <p>支付状态</p>
+                              <p class="pad-b30 cata" data-role="rules" data-dom="d2">
+                              <a id="d2" href="javascript:;" class="current" data-role="currentPad">不限</a>
+                              <a href="javascript:;">待支付</a>
+                              <a href="javascript:;">已支付</a>
+                              <a href="javascript:;">退费中</a>
+                              <a href="javascript:;">已退费</a>
+                              <a href="javascript:;">已取消</a>
+                              </p>
+                              <div class="popup-btn"><span class="cz-btn" style="float:left"><a id="reset" href="javascript:;">重置</a></span><span class="wc-btn" style="float:right;"><a id="finish" href="javascript:;">完成</a></span></div>
+                            </li>
+                        </ul>
+                    </dd>
+                </dl>
+            </section>
+        </div>
+        <ul class="ordered_register_list" data-role="list"></ul>
+    </div>
+    <div data-role="noOrders" style="display:none;">
+        <div class="no_result"><img src="/wechat/images/no_screen.png" alt="您未通过本微信端进行过网络预约挂号" /></div>
+        <div class="no_result_p">您未通过本微信端进行过网络预约挂号</div>
+    </div>
+</body>
+<script src="/general/script/reference/util.zepto.js"></script>
+<script src="/wechat/script/common/util.base.js"></script>
+<script src="/wechat/script/me/order/list/index.js"></script>
+</html>

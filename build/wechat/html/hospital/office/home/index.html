@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"/>
+    <meta content="yes" name="apple-mobile-web-app-capable"/>
+    <meta content="yes" name="apple-touch-fullscreen"/>
+    <meta content="telephone=no" name="format-detection"/>
+    <meta content="email=no" name="format-detection"/>
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <title>科室主页</title>
+    <link rel="stylesheet" type="text/css" href="/wechat/style/common-base.css?v=d034e4979d">
+    <link rel="stylesheet" type="text/css" href="/wechat/style/service.css?v=18d5af52e7">
+    <style>
+    .none {
+        display: none !important;
+    }
+    </style>
+</head>
+<body>
+     <!--取消中-->
+    <div class="b_c_popup" id="divbox" data-role="cancle-doing">
+        <img src="/wechat/images/circle_icon.png?v=cb755971c6" class="rotate">
+        <p>读取中，请稍候...</p>
+    </div>
+    <!--提示框开始-->
+<div class="order_popup" id="light" style="display:none;">
+    <ul>
+        <div data-role="wubielist"></div>
+        <li class="reg_tops_cancle"><a href = "javascript:void(0)" onclick = "document.getElementById('light').style.display='none';document.getElementById('fade').style.display='none'">取消</a></li>
+    </ul>
+</div>
+<!--提示框结束-->
+
+<div class="my_con">
+    <div class="my_con_pic" data-role="image"></div>
+    <div class="my_con_text">
+        <p class="t_name" data-role="drName"></p>
+        <p class="amount" data-role="regtAmt"></p>
+        <p class="hos_cp"><span class="kes_n" data-role="hospName"></span> | <span class="s_point i_medicine" data-role="deptName"></span></p>
+    </div>
+</div>
+<div class="outcall bor_tp">
+    <ul data-role="list"></ul>
+</div>
+<div id="fade" class="black_overlay"></div>
+
+<script src="/general/script/reference/util.zepto.js?v=9efc7c2f7a"></script>
+<script src="/wechat/script/common/util.base.js?v=154588cb3c"></script>
+<script src="/wechat/script/hospital/office/home/index.js?v=3ea7dddaad"></script>
+</body>
+</html>

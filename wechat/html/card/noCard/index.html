@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"/>
+    <meta content="yes" name="apple-mobile-web-app-capable"/>
+    <meta content="yes" name="apple-touch-fullscreen"/>
+    <meta content="telephone=no" name="format-detection"/>
+    <meta content="email=no" name="format-detection"/>
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <title>添加诊疗卡</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" type="text/css" href="/wechat/style/common-base.css">
+    <link rel="stylesheet" type="text/css" href="/wechat/style/layout.css">
+    <style>
+    .none {display: none !important;}
+    </style>
+</head>
+<body>
+    <!-- 已在医院建卡 {begin -->
+    <div data-view="hasCard" class="none">
+        <div class="give_hospital_con">
+            <h2 data-role="hospName"></h2>
+            <p data-role="tipstext">您已在医院建立诊疗卡，请确认后提交</p>
+        </div>
+        <ul class="fill_in info_list">
+            <li class="b_t">
+                <label><span>诊疗卡号：</span></label>
+                <div class="inp_div">
+                    <span class="span_con" data-role="cardId"></span>
+                </div>
+            </li>
+        </ul>
+        <section class="but_div2 m_t5">
+            <input type="button" value="提交" data-role="submit" class="disabled" disabled />
+        </section>
+    </div>
+    <!-- end} 已在医院建卡 -->
+
+
+    <!-- 未在医院建卡 -->
+    <div data-view="noCard" class="none">
+        <h2 class="hospital_tit" data-role="hospName"></h2>
+        <p data-role="tipstext" style="padding: 1rem 1.5rem; font-size: 1.5rem; line-height: 2.8rem;" class="none"></p>
+        <div data-role="onlinehide">
+            <ul class="fill_in info_list ">
+                <li>
+                    <label><span>诊疗卡号：</span></label>
+                    <div class="inp_div">
+                        <input type="text" data-role="cardId" value="" placeholder="请输入就诊卡号" readonly />
+                    </div>
+                </li>
+            </ul>
+            <section class="but_div2">
+                <input type="button" value="提交" data-role="submit" class="disabled" disabled />
+            </section>
+        </div>
+        <div class="not_card">
+            <div class="none" data-role="bindCardWays">
+                <h3>未获取到医院的诊疗卡，通过以下方式添加</h3>
+                <ul>
+                    <li data-role="scan" class="none">
+                        <a href="javascript:;">
+                            <img src="/wechat/images/sys_bg_no.png" />
+                            <span>扫描诊疗卡</span>
+                        </a>
+                    </li>
+                    <li data-role="online" class="none">
+                        <a href="javascript:;">
+                            <img src="/wechat/images/zxbl_bg.png" />
+                            <span>在线办理</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <p class="reminder">温馨提示：如还未在医院创建账号，请先携带有效证件到医院窗口或是自助机办理</p>
+        </div>
+    </div>
+    <script src="/general/script/reference/util.zepto.js"></script>
+    <script src="/wechat/script/common/util.base.js"></script>
+    <script src="/wechat/script/common/jweixin-1.0.0.js"></script>
+    <script src="/wechat/script/card/noCard/index.js"></script>
+</body>
+</html>

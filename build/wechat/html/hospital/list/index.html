@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"/>
+    <meta content="yes" name="apple-mobile-web-app-capable"/>
+    <meta content="yes" name="apple-touch-fullscreen"/>
+    <meta content="telephone=no" name="format-detection"/>
+    <meta content="email=no" name="format-detection"/>
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <title>医院列表</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" type="text/css" href="/wechat/style/common-base.css?v=d034e4979d">
+    <link rel="stylesheet" type="text/css" href="/wechat/style/service.css?v=18d5af52e7">
+    <style>
+    .none {display: none !important;}
+    </style>
+</head>
+
+<body>
+    <!-- 弹层文字 -->
+    <!-- <div class="hos_tips " id="light" style="display:none;">
+        <p class="tips-title">提示</p>
+        <p class="tips-text">您当前还未登录，登录成功后，方便快速挂号预约</p>
+        <p class="tips-btn"><a href="javascript:;" class="gray-a" data-role="laterOn">暂不登录</a><a href="/wechat/html/sys/login/?backto=/wechat/html/hospital/list/" class="blue-a" data-role="rightNow">立即登录</a></p>
+    </div> -->
+    <!--头部搜索框和取消-->
+    <div class="pf">
+        <div class="search_d">
+            <div class="search_d_bg search_mr" data-role="search_mr">
+                <span><img src="/wechat/images/search_icon.png?v=e5f3360e74"></span>
+                <input data-role="input" type="text" placeholder="请输入医生姓名" />
+                <i class="clear" data-role="clsearBtn"></i>
+            </div>
+            <div class="city_but" data-role="cancel"><span>取消</span></div>
+        </div>
+    </div>
+
+    <!--医院列表-->
+    <div class="hos_list mt65" data-role="hospList"></div>
+
+    <!--医院列表_历史记录-->
+    <div class="his_record none" data-role="record"></div>
+
+    <!-- 医生列表 -->
+    <div class="mt65" data-role="doctorList"></div>
+
+    <!-- 未找到相关结果 -->
+    <div data-role="no_his_record" class="none">
+        <div class="my_con_noresult">
+            <img src="/wechat/images/blank.png?v=3799174fde">
+        </div>
+        <p class="cen_text">未找到相关结果</p>
+    </div>
+
+    <div id="fade" class="black_overlay" style="display:none;"></div>
+
+    <script src="/general/script/reference/util.zepto.js?v=9efc7c2f7a"></script>
+    <script src="/wechat/script/common/util.base.js?v=154588cb3c"></script>
+    <script src="/wechat/script/hospital/list/index.js?v=17ddb61192"></script>
+</body>
+</html>

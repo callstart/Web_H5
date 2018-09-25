@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"/>
+    <meta content="yes" name="apple-mobile-web-app-capable"/>
+    <meta content="yes" name="apple-touch-fullscreen"/>
+    <meta content="telephone=no" name="format-detection"/>
+    <meta content="email=no" name="format-detection"/>
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <title>医生列表</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" type="text/css" href="/wechat/style/common-base.css?v=d034e4979d">
+    <link rel="stylesheet" type="text/css" href="/wechat/style/service.css?v=18d5af52e7">
+</head>
+<body>
+    <!--取消中-->
+    <div class="b_c_popup" id="divbox" data-role="cancle-doing">
+        <img src="/wechat/images/circle_icon.png?v=cb755971c6" class="rotate">
+        <p>读取中，请稍候...</p>
+    </div>
+<div class="doc_title" data-role="hospital-title"></div>
+<div class="doc_time" data-role="navChange">
+    <a href="javascript:;" class="prev" data-role="prevBtn"><img src="/wechat/images/ul_arrow_r.png?v=4f1090c203"></a>
+    <a href="javascript:;" class="all active" data-role="daysShow" data-all="allDate">全部</a>
+    <div class="doc_time_list" data-role="scrollWindow">
+        <ul data-role="scrollUl"></ul>
+  </div>
+    <a href="javascript:;" class="next active" data-role="nextBtn"><img src="/wechat/images/ul_arrow.png?v=9f94d91b68"></a>
+</div>
+<!--列表开始-->
+<div data-role="doctorList">
+</div>
+<div class="noresult pt_15" style="display: none" data-role="none">
+        <img src="/wechat/images/blank.png?v=3799174fde">暂无排班信息
+</div>
+
+<!--提示框开始-->
+<div class="order_popup" id="light" style="display:none;" data-role="timePrompt">
+    <ul data-role="timePromptUl"></ul>
+</div>
+<div id="fade" class="black_overlay" style="display:none" data-role="model"></div>
+<!--提示框结束-->
+
+</body>
+<script src="/general/script/reference/util.zepto.js?v=9efc7c2f7a"></script>
+<script src="/wechat/script/common/util.base.js?v=154588cb3c"></script>
+<script src="/wechat/script/appointment/doctor/index.js?v=96e4ed168b"></script>
+</html>

@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"/>
+    <meta content="yes" name="apple-mobile-web-app-capable"/>
+    <meta content="yes" name="apple-touch-fullscreen"/>
+    <meta content="telephone=no" name="format-detection"/>
+    <meta content="email=no" name="format-detection"/>
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <title>预约挂号确认</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" type="text/css" href="/wechat/style/common-base.css">
+    <link rel="stylesheet" type="text/css" href="/wechat/style/layout.css">
+    <link rel="stylesheet" type="text/css" href="/wechat/style/service.css">
+    <style>
+        .none{
+            display: none;
+        }
+        .fill_in .inp_div a.not_bg:after{
+            background:none;
+        }
+    </style>
+</head>
+<body>
+    <ul class="practice_info" data-role="baseInfo"></ul>
+    <ul class="fill_in info_list no_mb">
+        <li>
+            <label><span>就诊人</span></label>
+            <div class="inp_div">
+                <a href="javascript:;" class="choice_patients color9c not_bg" style="background: none;" data-role="patientName">请选择</a>
+            </div>
+        </li>
+        <li>
+            <label><span>诊疗卡号</span></label>
+            <div class="inp_div">
+                <a href="javascript:;" class="color9b" data-role="patientCard">请选择</a>
+            </div>
+        </li>
+    </ul>
+    <!--<ul class="fill_in no_mtb">
+        <li>
+            <label><i>*</i><span>手&nbsp;机&nbsp;号&nbsp;：</span></label>
+            <div class="inp_div">
+                <input type="number" data-input="content" data-role="telInput" value="" placeholder="请输入手机号" />
+            </div>
+        </li>
+        <li>
+            <label><i>*</i><span>验&nbsp;证&nbsp;码&nbsp;：</span></label>
+            <div class="inp_div code">
+                <input type="text" data-input="content" data-role="codeInput" value="" placeholder="请输入短信验证码" />
+            </div>
+            <input type="button" value="获取验证码" class="code_inp passwordGetCode" data-role="verificationCode" />
+        </li>
+        <li>
+            <label><i>*</i><span>支付方式：</span></label>
+            <div class="inp_div radio_choice" data-role="payMethod"></div>
+        </li>
+    </ul>-->
+    <section class="but_div2">
+        <input type="button" data-role="submitButton" value="提交" class="disabled" disabled/>
+    </section>
+    <div class="pop_patients" data-role="patientsList">
+        <h2>选择就诊人</h2>
+        <ul data-role="patientsListUl"></ul>
+        <section class="but_div2">
+            <input type="button" value="添加就诊人" data-role="addpatientBtn" />
+        </section>
+    </div>
+</body>
+<script src="/general/script/reference/util.zepto.js"></script>
+<script src="/wechat/script/common/util.base.js"></script>
+<script src="/wechat/script/appointment/confirm/index.js?sds=1"></script>
+</html>

@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"/>
+    <meta content="yes" name="apple-mobile-web-app-capable"/>
+    <meta content="yes" name="apple-touch-fullscreen"/>
+    <meta content="telephone=no" name="format-detection"/>
+    <meta content="email=no" name="format-detection"/>
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <title>我的医保卡</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" type="text/css" href="/wechat/style/common-base.css?v=d034e4979d">
+    <link rel="stylesheet" type="text/css" href="/wechat/style/layout.css?v=a3c1e3c2e2">
+</head>
+<body>
+    <div class="bound">
+        <img src="/wechat/images/ybk_bg2.png?v=03b9c50a40" />
+        <p>你当前还未绑定医保卡</p>
+    </div>
+    <p class="bind_explain">请输入以下信息，绑定个人的医保卡</p>
+    <ul class="fill_in">
+        <li>
+            <label><i>*</i><span>手&nbsp;机&nbsp;号&nbsp;：</span></label>
+            <div class="inp_div">
+                <input type="number" value="" placeholder="请输入手机号码" data-role="phoneNo"/>
+            </div>
+        </li>
+        <li>
+            <label><i>*</i><span>验&nbsp;证&nbsp;码&nbsp;：</span></label>
+            <div class="inp_div code">
+                <input type="text" value="" placeholder="短信验证码" data-role="msg"/>
+            </div>
+            <input type="button" value="获取验证码" class="code_inp passwordGetCode" data-role="btnMsg"/>
+        </li>
+        <li>
+            <label><i>*</i><span>医保卡号：</span></label>
+            <div class="inp_div">
+                <input type="text" value="" placeholder="输入医保卡号" data-role="miCardNo" />
+            </div>
+        </li>
+        <!-- <li>
+            <label><i>*</i><span class="l_s5">医保卡密码：</span></label>
+            <div class="inp_div">
+                <input type="password" value="" placeholder="输入医保卡查询密码" data-role="password" />
+            </div>
+        </li> -->
+    </ul>
+    <section class="but_div2">
+        <input type="button" value="立即绑定" class="disabled" disabled data-role="btn"/>
+    </section>
+    <script src="/general/script/reference/util.zepto.js?v=9efc7c2f7a"></script>
+    <script src="/wechat/script/common/util.base.js?v=154588cb3c"></script>
+    <script src="/wechat/script/me/micard/bind/index.js?v=a363410147"></script>
+</body>
+</html>

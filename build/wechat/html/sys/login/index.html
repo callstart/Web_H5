@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"/>
+    <meta content="yes" name="apple-mobile-web-app-capable"/>
+    <meta content="yes" name="apple-touch-fullscreen"/>
+    <meta content="telephone=no" name="format-detection"/>
+    <meta content="email=no" name="format-detection"/>
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <title>登录</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" type="text/css" href="/wechat/style/common-base.css?v=d034e4979d">
+    <link rel="stylesheet" type="text/css" href="/wechat/style/layout.css?v=a3c1e3c2e2">
+</head>
+<body>
+    <div class="gz_logo">
+        <img src="/wechat/images/gz_logo.png?v=2c03510d00">
+    </div>
+    <ul class="inp_list mt_36">
+        <li>
+            <input type="text" placeholder="请输入注册时的手机号" value="" data-role="tel" />
+        </li>
+        <li>
+            <input type="password" placeholder="请输入注册时设置的密码" value="" data-role="pw"/>
+        </li>
+    </ul>
+    <div class="forget_password"><a href="/wechat/html/sys/forgot/" data-role="forgot">忘记密码？</a></div>
+    <section class="but_div2">
+        <input type="button" value="登录" class="disabled" disabled data-role="btn"/>
+    </section>
+    <div class="go_register">还没有账户，<a href="/wechat/html/sys/reg/" data-role="reg">立即注册</a></div>
+    <div class="pop_patients">
+        <h2>选择就诊人</h2>
+        <ul data-role="patient"></ul>
+    </div>
+    <div class="mask"></div>
+    <script src="/general/script/reference/util.zepto.js?v=9efc7c2f7a"></script>
+    <script src="/wechat/script/common/util.base.js?v=154588cb3c"></script>
+    <script src="/wechat/script/sys/login/index.js?v=99c04c6587"></script>
+</body>
+</html>
+
+
+

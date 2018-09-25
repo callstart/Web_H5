@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        ul {
+        }
+        ul li {
+            font-size: 40px;
+            text-align: center;
+            height: 200px;
+            list-style: none;
+            border-bottom: 1px solid #000;
+        }
+    </style>
+</head>
+<body>
+    <ul id="ul">
+    </ul>
+
+
+    <script src="./zepto.1.1.6.js"></script>
+    <script src="./tglist.js"></script>
+
+    <script>
+        (function () {
+            taoguKit.scrollLoad({
+                wrapper: $('#ul'),
+                fetchDataFunc: function (page, cb) {
+                    cb && cb(new Array(20));
+                },
+                buildDataFunc: function (list, page) {
+                    var _h = [];
+                    for (var i = 0; i<20; i++) {
+                        _h.push(['<li>'+ Math.random() +'</li>'].join(''))
+                    }
+                    return _h.join('');
+                }
+            })
+        })()
+    </script>
+
+</body>
+</html>

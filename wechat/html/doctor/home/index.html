@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"/>
+    <meta content="yes" name="apple-mobile-web-app-capable"/>
+    <meta content="yes" name="apple-touch-fullscreen"/>
+    <meta content="telephone=no" name="format-detection"/>
+    <meta content="email=no" name="format-detection"/>
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <title>医生主页</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" type="text/css" href="/wechat/style/common-base.css">
+    <link rel="stylesheet" type="text/css" href="/wechat/style/service.css">
+    <style>
+    .none {display: none !important;}
+    </style>
+</head>
+<body>
+ <!--取消中-->
+<div class="b_c_popup" id="divbox" data-role="cancle-doing">
+    <img src="/wechat/images/circle_icon.png" class="rotate">
+    <p>读取中，请稍候...</p>
+</div>
+<!-- 头部医生信息 -->
+<div class="my_con" data-role="titleInfo"></div>
+<div class="doc_goodat_detail">
+    <img src="/wechat/images/goodat_Icon.png"><p data-role="skill"><b>擅长：</b></p>
+</div>
+<!-- 出诊时间 -->
+<div class="outcall">
+    <ul data-role="schedule">
+        <li class="outcall_title">出诊时间</li>
+    </ul>
+</div>
+<!-- 弹层 -->
+<div id="fade" class="black_overlay none"></div>
+<!-- 提示框开始 -->
+<div class="order_popup none" id="light">
+</div>
+<script src="/general/script/reference/util.zepto.js"></script>
+<script src="/wechat/script/common/util.base.js"></script>
+<script src="/wechat/script/doctor/home/index.js"></script>
+</body>
+</html>
